@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pro.name %>
+</p>
+<% @pro.lists.each do |list| %>
+<p>
+  <b>Username:</b>
+  <%= list.name %>
+  <b>Idcard:</b>
+  <%= list.idcard %>
+  <b>others:</b>
+  <%= link_to "Lists", pro_list_path(:pro_id=>list,:id=>list.id,) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_pro_path(@pro) %> |
+<%= link_to 'Back', pros_path %>

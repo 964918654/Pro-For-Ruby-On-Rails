@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @list.name %>
+</p>
+
+<p>
+  <strong>Idcard:</strong>
+  <%= @list.idcard %>
+</p>
+<p>
+  <strong>Pro_id:</strong>
+  <%= @list.pro_id %>
+</p>
+<p>
+  <strong>Pic:</strong>
+  	<%= image_tag(@list.pic_url) if @list.pic %>
+</p>
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>
